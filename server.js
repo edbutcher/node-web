@@ -42,6 +42,13 @@ app.get('/about', (request, respose) => {
   });
 });
 
+app.get('/projects', (request, respose) => {
+  respose.render('projects.hbs', {
+    pageTitle: 'Projects page',
+    githubLink: 'https://github.com/edbutcher/node-web'
+  });
+});
+
 app.get('/', (request, respose) => {
   respose.render('home.hbs', {
     pageTitle: 'Home page',
